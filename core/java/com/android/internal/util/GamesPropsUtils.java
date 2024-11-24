@@ -52,17 +52,12 @@ public class GamesPropsUtils {
     private static final Map<String, Object> propsToChangeOP8P = createMap("IN2020", "OnePlus");
     private static final String[] packagesToChangeOP8P = { // spoof as OnePlus 8 PRO
             "com.netease.lztgglobal",
-            "com.pubg.krmobile",
-            "com.rekoo.pubgm",
             "com.riotgames.league.wildrift",
             "com.riotgames.league.wildrifttw",
             "com.riotgames.league.wildriftvn",
             "com.riotgames.league.teamfighttactics",
             "com.riotgames.league.teamfighttacticstw",
             "com.riotgames.league.teamfighttacticsvn",
-            "com.tencent.ig",
-            "com.tencent.tmgp.pubgmhd",
-            "com.vng.pubgmobile",
     };
 
     private static final Map<String, Object> propsToChangeOP9P = createMap("LE2101", "OnePlus");
@@ -95,9 +90,16 @@ public class GamesPropsUtils {
             "com.vng.codmvn",
     };
 
-    private static final Map<String, Object> propsToChangeK30U = createMap("M2006J10C", "Xiaomi");
-    private static final String[] packagesToChangeK30U = { // spoof as Redmi K30 Ultra
+    private static final Map<String, Object> propsToChangeGT7P = createMap("RMX5011", "realme");
+    private static final String[] packagesToChangeGT7P = { // spoof as realme GT 7 Pro
+            "com.ea.gp.apexlegendsmobilefps",
+            "com.mobile.legends",
             "com.pubg.imobile",
+            "com.pubg.krmobile",
+            "com.rekoo.pubgm",
+            "com.tencent.ig",
+            "com.tencent.tmgp.pubgmhd",
+            "com.vng.pubgmobile",
     };
 
     private static Map<String, Object> createMap(String model, String manufacturer) {
@@ -129,8 +131,8 @@ public class GamesPropsUtils {
             propsToChange = propsToChangeROG6;
         } else if (Arrays.asList(packagesToChangeXP5).contains(packageName)) {
             propsToChange = propsToChangeXP5;
-        } else if (Arrays.asList(packagesToChangeK30U).contains(packageName)) {
-            propsToChange = propsToChangeK30U;
+        } else if (Arrays.asList(packagesToChangeGT7P).contains(packageName)) {
+            propsToChange = propsToChangeGT7P;
         }
         if (propsToChange != null) {
             dlog("Defining props for: " + packageName);
